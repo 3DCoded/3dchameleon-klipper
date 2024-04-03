@@ -8,8 +8,16 @@ class Chameleon:
         self.config = config
 
         self.filament_sensor_name = config.get('filament_sensor_name', 'fsensor')
+        self.filament_sensor0 = config.get('filament_sensor0', self.filament_sensor_name)
+        self.filament_sensor1 = config.get('filament_sensor1', self.filament_sensor_name)
+        self.filament_sensor2 = config.get('filament_sensor2', self.filament_sensor_name)
+        self.filament_sensor3 = config.get('filament_sensor3', self.filament_sensor_name)
         self.filament_sensor_type = config.get('filament_sensor_type', 'filament_switch_sensor')
         self.fsensor = self.printer.load_object(self.config, f'{self.filament_sensor_type} {self.filament_sensor_name}')
+        self.fsensor0 = self.printer.load_object(self.config, f'{self.filament_sensor_type} {self.filament_sensor0}')
+        self.fsensor1 = self.printer.load_object(self.config, f'{self.filament_sensor_type} {self.filament_sensor1}')
+        self.fsensor2 = self.printer.load_object(self.config, f'{self.filament_sensor_type} {self.filament_sensor2}')
+        self.fsensor3 = self.printer.load_object(self.config, f'{self.filament_sensor_type} {self.filament_sensor3}')
 
         self.pin = config.get('pin', '3dchameleon')
         self.chameleon_pin = self.printer.load_object(self.config, f'output_pin {self.pin}')
@@ -20,7 +28,7 @@ class Chameleon:
         self.max_load_time = config.getfloat('max_load_time', self.load_time + 10)
         self.pulse_time = config.getfloat('pulse_time', 0.5)
 
-        self.filament_detected = False
+        self.filament_detected = [False] * 5
 
         logging.info('3DChameleon: Initialized Successfully')
 
@@ -68,7 +76,7 @@ class Chameleon:
         self.printer.register_event_handler("klippy:ready", lambda: self.cmd_UPDATE_CHAMELEON_SENSOR(None))
     
     def _read_fsensor(self):
-        return self.fsensor.runout_helper.filament_present
+        return [self.fsensor0.runout_helper.filament_present, self.fsensor1.runout_helper.filament_present, self.fsensor2.runout_helper.filament_present, self.fsensor3.runout_helper.filament_present, self.fsensor.runout_helper.filament_present]
     
     def _set_chameleon(self, value):
         toolhead = self.printer.lookup_object('toolhead')
@@ -80,11 +88,12 @@ class Chameleon:
     
     cmd_UNLOAD_CHAMELEON_help = 'Unloads the 3DChameleon until the filament is past the filament runout sensor (when it reads False), and then waits unload_time to pull the filament out of the way for the next filament. Note that if the filament takes more than max_unload_time to trigger the filament sensor, then it will abort'
     def cmd_UNLOAD_CHAMELEON(self, gcmd):
+        tool = gcmd.get_int('TOOL')
         self._set_chameleon(True)
         start = time.time()
         self.gcode.run_script_from_command('UPDATE_CHAMELEON_SENSOR')
-        while self.filament_detected:
-            logging.info(f'3DChameleon Unload Sensor: {self.filament_detected}')
+        while self.filament_detected[tool]:
+            logging.info(f'3DChameleon Unload Sensor: {self.filament_detected[tool]}')
             self.gcode.run_script_from_command('UPDATE_CHAMELEON_SENSOR')
             if time.time() - start > self.max_unload_time:
                 self._set_chameleon(False)
