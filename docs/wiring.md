@@ -9,8 +9,12 @@
 | - | - |
 | + (Red) | Same (via Dupont) |
 | - (Black) | Same (via Dupont) |
-| Data (Green) | Dupont (leave other end loose for now) |
-| Another dupont (leave other end loose for now) | Data (Last remaining limit switch pin)
+
+**Misc Wiring**
+| Source | Destination |
+| - | - |
+| Limit Switch Data (Green) | Dupont (leave other end loose for now) |
+| 3DChameleon Data (Last remaining limit switch pin on 3DChameleon board) | Another dupont (leave other end loose for now) | 
 
 **Limit Switch to Relay**
 
