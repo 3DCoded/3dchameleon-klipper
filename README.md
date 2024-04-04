@@ -1,4 +1,4 @@
-# 3dchameleon-klipper
+# Unofficial Klipper Support for 3DChameleon
 ### A highly configurable klipper extras module and configuration for the 3DChameleon
 **NOTE: The limit switch should be connected to the Raspberry Pi running Klipper and the Chameleon via a relay**
 
