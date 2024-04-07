@@ -9,6 +9,7 @@
 
 **Planned Features:**
 - Support for multiple filament sensors to reduce failed unloads
+- Support for "telling" the Chameleon what tool is loaded based on the filament sensors
 - More configuration options
 - More helpful macros and G-Code commands
 - Helpful messages to help to diagnose the cause of a failed load or unload
