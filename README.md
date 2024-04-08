@@ -10,7 +10,7 @@
 **Planned Features:**
 - Support for multiple filament sensors to reduce failed unloads (See https://github.com/3DCoded/3dchameleon-klipper/issues/4)
 - Support for "telling" the Chameleon what tool is loaded based on the filament sensors
-- Ability to assist with initially loading the Chameleon
+- Ability to assist with initially loading the Chameleon (see https://github.com/3DCoded/3dchameleon-klipper/issues/5)
 - More configuration options
 - More helpful macros and G-Code commands
 - Helpful messages to help to diagnose the cause of a failed load or unload
