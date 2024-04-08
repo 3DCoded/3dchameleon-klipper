@@ -26,7 +26,7 @@ class Chameleon:
 
         self.unload_time = config.getfloat('unload_time', 7.5)
         self.max_unload_time = config.getfloat('max_unload_time', 10)
-        self.load_time = config.getint('load_time', 0.5)
+        self.load_time = config.getfloat('load_time', 0.5)
         self.max_load_time = config.getfloat('max_load_time', self.load_time + 10)
         self.pulse_time = config.getfloat('pulse_time', 0.5)
 
