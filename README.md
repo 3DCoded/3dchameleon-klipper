@@ -8,8 +8,9 @@
 - Saving the state of the 3DChameleon to reduce the guesswork
 
 **Planned Features:**
-- Support for multiple filament sensors to reduce failed unloads
+- Support for multiple filament sensors to reduce failed unloads (See https://github.com/3DCoded/3dchameleon-klipper/issues/4)
 - Support for "telling" the Chameleon what tool is loaded based on the filament sensors
+- Ability to assist with initially loading the Chameleon
 - More configuration options
 - More helpful macros and G-Code commands
 - Helpful messages to help to diagnose the cause of a failed load or unload
