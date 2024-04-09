@@ -123,7 +123,7 @@ class Chameleon:
         if self.filament_sensor_enabled:
             start = time.time()
             self.gcode.run_script_from_command('UPDATE_CHAMELEON_SENSOR')
-            while not self.filament_detected:
+            while not self.filament_detected[-1]:
                 logging.info(f'3DChameleon Load Sensor: {self.filament_detected}')
                 self.gcode.run_script_from_command('UPDATE_CHAMELEON_SENSOR')
                 if time.time() - start > self.max_load_time:
