@@ -3,10 +3,12 @@ import time
 
 class Chameleon:
     def __init__(self, config):
+        # Setup variables
         self.printer = config.get_printer()
         self.gcode = self.printer.lookup_object('gcode')
         self.config = config
 
+        # Parse config
         self.filament_sensor_name = config.get('filament_sensor_name', 'fsensor')
         self.filament_sensor_enabled = self.filament_sensor_name != 'disabled'
         if self.filament_sensor_enabled:
@@ -34,6 +36,7 @@ class Chameleon:
 
         logging.info('3DChameleon: Initialized Successfully')
 
+        # Register GCode Commands
         self.gcode.register_command(
             'UPDATE_CHAMELEON_SENSOR',
             self.cmd_UPDATE_CHAMELEON_SENSOR
@@ -70,6 +73,12 @@ class Chameleon:
         )
 
         self.gcode.register_command(
+            'MOVE_CHAMELEON_FILAMENT',
+            self.cmd_MOVE_CHAMELEON_FILAMENT,
+            self.cmd_MOVE_CHAMELEON_FILAMENT_help
+        )
+
+        self.gcode.register_command(
             'RESET_CHAMELEON',
             self.cmd_RESET_CHAMELEON,
             self.cmd_RESET_CHAMELEON_help
@@ -81,6 +90,7 @@ class Chameleon:
             self.cmd_QUERY_CHAMELEON_SENSOR_help
         )
 
+        # Set event handler
         self.printer.register_event_handler("klippy:ready", lambda: self.cmd_UPDATE_CHAMELEON_SENSOR(None))
     
     def _read_fsensor(self):
@@ -92,6 +102,14 @@ class Chameleon:
         toolhead = self.printer.lookup_object('toolhead')
         toolhead.register_lookahead_callback(
             lambda print_time: self.chameleon_pin._set_pin(print_time, value))
+    
+    def _press_chameleon(self, duration):
+        self._set_chameleon(True)
+        self.gcode.run_script_from_command(f'G4 P{duration * 1000}')
+        self._set_chameleon(False)
+    
+    def _pulse_chameleon(self, pulses):
+        self._press_chameleon(pulses * self.pulse_time)
     
     def cmd_UPDATE_CHAMELEON_SENSOR(self, gcmd=None):
         if not self.filament_sensor_enabled:
@@ -113,7 +131,7 @@ class Chameleon:
                     self.gcode.run_script_from_command('M117 Unload Failed')
                     self.gcode.run_script_from_command('PAUSE')
                     break
-                self.gcode.run_script_from_command('G4 P250')
+                self.gcode.run_script_from_command('M83\nG92 E0\nG1 E-10 F2400')
         self.gcode.run_script_from_command(f'G4 P{self.unload_time * 1000}')
         self._set_chameleon(False)
     
@@ -131,17 +149,13 @@ class Chameleon:
                     self.gcode.run_script_from_command('M117 Load Failed')
                     self.gcode.run_script_from_command('PAUSE')
                     break
-                self.gcode.run_script_from_command('G4 P250')
-        self.gcode.run_script_from_command(f'G4 P{self.load_time * 1000}')
+                self.gcode.run_script_from_command('M83\nG92 E0\nG1 E10 F2400')
+        self.gcode.run_script_from_command(f'M83\nG92 E0\nG1 E{self.load_time * 10} F6000')
         self._set_chameleon(False)
     
     cmd_PULSE_CHAMELEON_help = 'Presses the 3DChameleon for the duration of PULSES * pulse_time'
     def cmd_PULSE_CHAMELEON(self, gcmd):
-        self._set_chameleon(True)
-        pulses = gcmd.get_int('PULSES', 0)
-        pulses_ms = int(pulses * self.pulse_time * 1000)
-        self.gcode.run_script_from_command(f'G4 P{pulses_ms}')
-        self._set_chameleon(False)
+        self._pulse_chamelon(gcmd.get_int('PULSES', 0))
     
     cmd_RESET_CHAMELEON_help = 'Resets the 3DChameleon\'s state by rapidly pulsing it twice'
     def cmd_RESET_CHAMELEON(self, gcmd):
@@ -152,11 +166,19 @@ class Chameleon:
     
     cmd_PRESS_CHAMELEON_help = 'Press the 3DChameleon for the duration of DURATION'
     def cmd_PRESS_CHAMELEON(self, gcmd):
-        self._set_chameleon(True)
-        duration = gcmd.get_float('DURATION', 0)
-        duration_ms = int(duration * 1000)
-        self.gcode.run_script_from_command(f'G4 P{duration_ms}')
-        self._set_chameleon(False)
+        self._press_chameleon(gcmd.get_float('DURATION', 0))
+    
+    cmd_MOVE_CHAMELEON_FILAMENT_help = 'Moves the given TOOL by IN or MM'
+    def cmd_MOVE_CHAMELEON_FILAMENT(self, gcmd):
+        self._pulse_chameleon(7)
+        self._pulse_chameleon(gcmd.get_int('TOOL', 0))
+        inches = gcmd.get_float('IN', None)
+        millimeters = gcmd.get_float('MM', None)
+        if inches is not None:
+            duration = inches
+        elif millimeters is not None:
+            duration = millimeters * 25
+        self._press_chameleon(duration)
     
     cmd_SET_CHAMELEON_help = 'Sets the 3DChameleon pin to HIGH or LOW, as determined by VALUE'
     def cmd_SET_CHAMELEON(self, gcmd):
