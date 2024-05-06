@@ -7,6 +7,7 @@
 - Many helpful macros and G-Code commands
 - Saving the state of the 3DChameleon to reduce the guesswork
 - Helping in tip shaping with a flexible macro
+- Assigning different tip shaping parameters for each filament
 
 **Planned Features:**
 - Support for multiple filament sensors to reduce failed unloads (See https://github.com/3DCoded/3dchameleon-klipper/issues/4)
