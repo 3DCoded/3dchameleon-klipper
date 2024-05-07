@@ -9,6 +9,8 @@ class Chameleon:
         self.config = config
 
         # Parse config
+        self.clippy = config.getbool('clippy', False)
+        self.clippy_distance = config.getfloat('clippy_distance', 40)
         self.filament_sensor_name = config.get('filament_sensor_name', 'fsensor')
         self.filament_sensor_enabled = self.filament_sensor_name != 'disabled'
         if self.filament_sensor_enabled:
@@ -120,7 +122,7 @@ class Chameleon:
     def cmd_UNLOAD_CHAMELEON(self, gcmd):
         tool = gcmd.get_int('TOOL')
         self._set_chameleon(True)
-        if self.filament_sensor_enabled:
+        if self.filament_sensor_enabled and self.clippy:
             start = time.time()
             self.gcode.run_script_from_command('UPDATE_CHAMELEON_SENSOR')
             while self.filament_detected[tool]:
@@ -132,6 +134,8 @@ class Chameleon:
                     self.gcode.run_script_from_command('PAUSE')
                     break
                 self.gcode.run_script_from_command('M83\nG92 E0\nG1 E-10 F2400')
+        if self.clippy:
+            self.gcode.run_script_from_command(f'M83\nG92 E0\nG1 E{self.clippy_distance} F2400')
         self.gcode.run_script_from_command(f'G4 P{self.unload_time * 1000}')
         self._set_chameleon(False)
     
