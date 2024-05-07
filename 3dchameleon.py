@@ -159,7 +159,7 @@ class Chameleon:
     
     cmd_PULSE_CHAMELEON_help = 'Presses the 3DChameleon for the duration of PULSES * pulse_time'
     def cmd_PULSE_CHAMELEON(self, gcmd):
-        self._pulse_chamelon(gcmd.get_int('PULSES', 0))
+        self._pulse_chameleon(gcmd.get_int('PULSES', 0))
     
     cmd_RESET_CHAMELEON_help = 'Resets the 3DChameleon\'s state by rapidly pulsing it twice'
     def cmd_RESET_CHAMELEON(self, gcmd):
