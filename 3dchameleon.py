@@ -9,7 +9,7 @@ class Chameleon:
         self.config = config
 
         # Parse config
-        self.clippy = config.getbool('clippy', False)
+        self.clippy = config.getboolean('clippy', False)
         self.clippy_distance = config.getfloat('clippy_distance', 40)
         self.filament_sensor_name = config.get('filament_sensor_name', 'fsensor')
         self.filament_sensor_enabled = self.filament_sensor_name != 'disabled'
