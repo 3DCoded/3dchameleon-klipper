@@ -1,6 +1,10 @@
 site_name: 3DChameleon-klipper Docs
 site_url: https://3dcoded.github.io/3dchameleon-klipper
+repo_url: https://github.com/3dcoded/3dchameleon-klipper
 theme:
+  features:
+      - navigation.instant
+      - navigation.instant.prefetch
   name: material
   palette: 
 
