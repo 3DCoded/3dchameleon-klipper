@@ -2,8 +2,7 @@ name: ci
 on:
   push:
     branches:
-      - master 
-      - main
+      - gh-pages
 permissions:
   contents: write
 jobs:
