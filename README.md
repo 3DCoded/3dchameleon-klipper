@@ -17,4 +17,4 @@
 - More helpful macros and G-Code commands
 - Helpful messages to help to diagnose the cause of a failed load or unload
 
-For information on setup and usage, configuration, and more, please see [the Wiki](https://github.com/3DCoded/3dchameleon-klipper/wiki)
+For information on setup and usage, configuration, and more, please see [the Documentation](https://3dcoded.github.io/3dchameleon-klipper/)
