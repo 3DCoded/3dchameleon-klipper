@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://3dcoded.github.io/3dchameleon-klipper/">
+        <link rel="canonical" href="https://3dcoded.github.io/3dchameleon-klipper/other/utilitygcodes/">
       
       
+        <link rel="prev" href="../updating/">
       
-        <link rel="next" href="initialsetup/wiring/">
+      
+        <link rel="next" href="../../troubleshooting/unloadfailed/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
     
     
       
-        <title>3DChameleon-klipper Docs</title>
+        <title>Utility G-Codes - 3DChameleon-klipper Docs</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#home" class="md-skip">
+        <a href="#utility-g-codes" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="3DChameleon-klipper Docs" class="md-header__button md-logo" aria-label="3DChameleon-klipper Docs" data-md-component="logo">
+    <a href="../.." title="3DChameleon-klipper Docs" class="md-header__button md-logo" aria-label="3DChameleon-klipper Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Utility G-Codes
             
           </span>
         </div>
@@ -228,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="3DChameleon-klipper Docs" class="md-nav__button md-logo" aria-label="3DChameleon-klipper Docs" data-md-component="logo">
+    <a href="../.." title="3DChameleon-klipper Docs" class="md-nav__button md-logo" aria-label="3DChameleon-klipper Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -255,30 +257,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -287,86 +269,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    <span class="md-ellipsis">
-      About
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      "Quick"-start
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=""Quick"-start">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wiring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Wiring
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#slicer-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Slicer Setup
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -415,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="initialsetup/wiring/" class="md-nav__link">
+      <a href="../../initialsetup/wiring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -436,7 +338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="initialsetup/configuration/" class="md-nav__link">
+      <a href="../../initialsetup/configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="initialsetup/slicersetup/" class="md-nav__link">
+      <a href="../../initialsetup/slicersetup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,19 +384,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -508,7 +410,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Other
@@ -522,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="other/updating/" class="md-nav__link">
+      <a href="../updating/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -540,10 +442,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="other/utilitygcodes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Utility G-Codes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -552,6 +474,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utility-g-codes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utility G-Codes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugginginternal-use-g-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging/Internal Use G-Codes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tip_shaping-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      TIP_SHAPING STAGES=
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-unload_chameleon-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How UNLOAD_CHAMELEON works
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How UNLOAD_CHAMELEON works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#without-auto3dclippy" class="md-nav__link">
+    <span class="md-ellipsis">
+      WITHOUT Auto3DClippy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-auto3dclippy-experimental-in-dev-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      WITH Auto3DClippy (Experimental in dev branch)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-load_chameleon-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How LOAD_CHAMELEON works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-unloadload-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      On Unload/Load Failed
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -608,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting/unloadfailed/" class="md-nav__link">
+      <a href="../../troubleshooting/unloadfailed/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -629,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting/loadfailed/" class="md-nav__link">
+      <a href="../../troubleshooting/loadfailed/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -694,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/bugs/" class="md-nav__link">
+      <a href="../../contributing/bugs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -715,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/features/" class="md-nav__link">
+      <a href="../../contributing/features/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -736,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/branches/" class="md-nav__link">
+      <a href="../../contributing/branches/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -784,55 +804,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
+  <a href="#utility-g-codes_1" class="md-nav__link">
     <span class="md-ellipsis">
-      About
+      Utility G-Codes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
+  <a href="#debugginginternal-use-g-codes" class="md-nav__link">
     <span class="md-ellipsis">
-      "Quick"-start
+      Debugging/Internal Use G-Codes
     </span>
   </a>
   
-    <nav class="md-nav" aria-label=""Quick"-start">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tip_shaping-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      TIP_SHAPING STAGES=
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-unload_chameleon-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How UNLOAD_CHAMELEON works
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How UNLOAD_CHAMELEON works">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#wiring" class="md-nav__link">
+  <a href="#without-auto3dclippy" class="md-nav__link">
     <span class="md-ellipsis">
-      Wiring
+      WITHOUT Auto3DClippy
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
+  <a href="#with-auto3dclippy-experimental-in-dev-branch" class="md-nav__link">
     <span class="md-ellipsis">
-      Install
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#slicer-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Slicer Setup
+      WITH Auto3DClippy (Experimental in dev branch)
     </span>
   </a>
   
@@ -840,6 +860,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-load_chameleon-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How LOAD_CHAMELEON works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-unloadload-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      On Unload/Load Failed
+    </span>
+  </a>
   
 </li>
       
@@ -861,20 +899,70 @@
   
 
 
-<h1 id="home">Home</h1>
-<h2 id="about">About</h2>
-<p><strong>3dchameleon-klipper</strong> is a highly configuration klipper plugin for the <a href="https://3dchameleon.com">3DChameleon</a></p>
-<h2 id="quick-start">"Quick"-start</h2>
-<h3 id="wiring">Wiring</h3>
-<p>To begin setting up <strong>3dchameleon-klipper</strong>, see <a href="initialsetup/wiring/">Wiring</a> to connect your 3DChameleon to your Raspberry Pi.</p>
-<h3 id="install">Install</h3>
-<p>Install <strong>3dchameleon-klipper</strong>. Run the following on your Raspberry Pi:</p>
-<pre><code>`cd ~ &amp;&amp; git clone https://github.com/3DCoded/3dchameleon-klipper &amp;&amp; cd 3dchameleon-klipper &amp;&amp; ./install.sh`
-</code></pre>
-<h3 id="configuration">Configuration</h3>
-<p>Follow <a href="initialsetup/configuration/">Configuration</a> to configure your 3DChameleon to your specific setup.</p>
-<h3 id="slicer-setup">Slicer Setup</h3>
-<p>Follow <a href="initialsetup/slicersetup/">Slicer Setup</a> to setup PrusaSlier for this plugin and your 3DChameleon. OrcaSlicer support is coming soon.</p>
+<h1 id="utility-g-codes">Utility G-Codes</h1>
+<p>3dchameleon-klipper provides several utility G-Codes to assist in controlling your Chameleon.</p>
+<h2 id="utility-g-codes_1">Utility G-Codes</h2>
+<ul>
+<li><code>SET_CHAMELEON VALUE=</code> Sets the relay pin to <code>VALUE</code>, where <code>1</code> is on, and <code>0</code> is off</li>
+<li><code>UNLOAD_CHAMELEON TOOL=</code> Unloads the Chameleon at the provided <code>TOOL</code>, described more below, This is usually only used in the <code>TOOLCHANGE</code> macro</li>
+<li><code>LOAD_CHAMELEON</code> Loads the Chameleon, described more below</li>
+<li><code>PRESS_CHAMELEON DURATION=</code> Presses the chameleon pin for the provided <code>DURATION</code></li>
+<li><code>PULSE_CHAMELEON PULSES=</code> Pulses the chameleon pin for the duration <code>PULSES * pulse_time</code> (<code>pulse_time</code> was set in <a href="../../initialsetup/configuration/">Configuration</a>)</li>
+<li><code>RESET_CHAMELEON</code> Rapidly pulses the chameleon pin twice to reset the state to be ready for a toolchange (exits the load/unload filament stage of the Chameleon)</li>
+<li><code>TIP_SHAPING TEMP= STAGES=</code> Runs tip shaping using the default 3DChameleon method, then heats to <code>TEMP</code>. See below for information on <code>STAGES</code></li>
+</ul>
+<h2 id="debugginginternal-use-g-codes">Debugging/Internal Use G-Codes</h2>
+<ul>
+<li><code>UPDATE_CHAMELEON_SENSOR</code> Updates the Chameleon's filament sensors and saves the value internally</li>
+<li><code>QUERY_CHAMELEON_SENSOR</code> Queries the Chameleon's filament sensors, output in the form of <code>[x,x,x,x,x]</code>, where <code>x=1</code> means filament present, and <code>x=0</code> means filament not present. This returns a list in preparation for multiple filament sensor support.</li>
+</ul>
+<h2 id="tip_shaping-stages">TIP_SHAPING STAGES=</h2>
+<ul>
+<li><code>STAGES=1</code> Cool to 180, do full tip shaping, then heat to <code>TEMP</code></li>
+<li><code>STAGES=2</code> Cool to 180, then 165, do tip shaping, then heat to <code>TEMP</code></li>
+<li><code>STAGES=3</code> Cool to 180, then 165, then 155, do tip shaping, then heat to <code>TEMP</code></li>
+<li><code>STAGES=4</code> Default behavior. Cool to 180, then 165, then 155, then 150, do tip shaping, then heat to <code>TEMP</code></li>
+</ul>
+<p><strong>NOTE</strong> that smaller tip shaping moves may be executed between temperature increments.</p>
+<h2 id="how-unload_chameleon-works">How UNLOAD_CHAMELEON works</h2>
+<h3 id="without-auto3dclippy">WITHOUT Auto3DClippy</h3>
+<ol>
+<li>"Press" the Chameleon pin</li>
+<li>Check if filament detected for <code>TOOL</code></li>
+<li>Run <code>UPDATE_CHAMELEON_SENSOR</code></li>
+<li>Check if more than <code>max_unload_time</code> has elapsed. If so, skip remaining steps and unload failed</li>
+<li>Wait 0.25s with <code>G4 P250</code></li>
+</ol>
+<p>EXPERIMENTAL: Step 5 will use <code>G1 E-10 F2400</code> instead of <code>G4 P250</code> to wait 0.25s</p>
+<ol>
+<li>Repeat steps 2-5 until filament is not detected for <code>TOOL</code></li>
+<li>Wait another <code>unload_time</code> with <code>G4 P</code> with <code>unload_time * 1000</code></li>
+<li>"Release" the Chameleon pin</li>
+</ol>
+<h3 id="with-auto3dclippy-experimental-in-dev-branch">WITH Auto3DClippy (Experimental in dev branch)</h3>
+<ol>
+<li>"Press" the Chameleon pin</li>
+<li>Load filament <code>clippy_distance</code> at 40mm/s</li>
+<li>Wait <code>unload_time</code> with <code>G4 P</code> with <code>unload_time * 1000</code></li>
+<li>"Release" the Chameleon pin</li>
+</ol>
+<h2 id="how-load_chameleon-works">How LOAD_CHAMELEON works</h2>
+<ol>
+<li>"Press" the Chameleon pin</li>
+<li>Check if filament detected for <code>TOOL</code></li>
+<li>Run <code>UPDATE_CHAMELEON_SENSOR</code></li>
+<li>Check if more than <code>max_load_time</code> has elapsed. If so, skip remaining steps and load failed</li>
+<li>Wait 0.25s with <code>G4 P250</code></li>
+<li>Repeat steps 2-5 until filament is detected</li>
+<li>Wait another <code>load_time</code> with <code>G4 P</code> with <code>load_time * 1000</code></li>
+<li>"Release" the Chameleon pin</li>
+</ol>
+<h2 id="on-unloadload-failed">On Unload/Load Failed</h2>
+<ol>
+<li>"Release" the Chameleon relay pin</li>
+<li>Display Unload/Load Failed with <code>M117</code></li>
+<li>Pause with <code>PAUSE</code></li>
+</ol>
 
 
 
@@ -921,10 +1009,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.instant", "navigation.instant.prefetch", "search.suggest", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.instant.prefetch", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
   </body>
