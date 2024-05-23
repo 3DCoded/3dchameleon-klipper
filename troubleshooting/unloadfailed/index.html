@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://3dcoded.github.io/3dchameleon-klipper/">
+        <link rel="canonical" href="https://3dcoded.github.io/3dchameleon-klipper/troubleshooting/unloadfailed/">
       
       
+        <link rel="prev" href="../../other/utilitygcodes/">
       
-        <link rel="next" href="initialsetup/wiring/">
+      
+        <link rel="next" href="../loadfailed/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
     
     
       
-        <title>3DChameleon-klipper Docs</title>
+        <title>Unload Failed - 3DChameleon-klipper Docs</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#home" class="md-skip">
+        <a href="#unload-failed" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="3DChameleon-klipper Docs" class="md-header__button md-logo" aria-label="3DChameleon-klipper Docs" data-md-component="logo">
+    <a href="../.." title="3DChameleon-klipper Docs" class="md-header__button md-logo" aria-label="3DChameleon-klipper Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Unload Failed
             
           </span>
         </div>
@@ -228,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="3DChameleon-klipper Docs" class="md-nav__button md-logo" aria-label="3DChameleon-klipper Docs" data-md-component="logo">
+    <a href="../.." title="3DChameleon-klipper Docs" class="md-nav__button md-logo" aria-label="3DChameleon-klipper Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -255,30 +257,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -287,86 +269,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    <span class="md-ellipsis">
-      About
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      "Quick"-start
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=""Quick"-start">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wiring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Wiring
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#slicer-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Slicer Setup
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -415,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="initialsetup/wiring/" class="md-nav__link">
+      <a href="../../initialsetup/wiring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -436,7 +338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="initialsetup/configuration/" class="md-nav__link">
+      <a href="../../initialsetup/configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="initialsetup/slicersetup/" class="md-nav__link">
+      <a href="../../initialsetup/slicersetup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -522,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="other/updating/" class="md-nav__link">
+      <a href="../../other/updating/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -543,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="other/utilitygcodes/" class="md-nav__link">
+      <a href="../../other/utilitygcodes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -568,19 +470,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -594,7 +496,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Troubleshooting
@@ -605,10 +507,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="troubleshooting/unloadfailed/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Unload Failed
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -617,6 +539,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-error-means" class="md-nav__link">
+    <span class="md-ellipsis">
+      What the error means
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-recover-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to recover it
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-it-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why it failed
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why it failed">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#faulty-filament-sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Faulty filament sensor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printers-extruder-didnt-unload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printer's extruder didn't unload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3dchameleon-filament-grip" class="md-nav__link">
+    <span class="md-ellipsis">
+      3DChameleon filament grip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-shaping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip Shaping
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -629,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting/loadfailed/" class="md-nav__link">
+      <a href="../loadfailed/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -694,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/bugs/" class="md-nav__link">
+      <a href="../../contributing/bugs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -715,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/features/" class="md-nav__link">
+      <a href="../../contributing/features/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -736,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/branches/" class="md-nav__link">
+      <a href="../../contributing/branches/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -784,55 +795,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
+  <a href="#what-the-error-means" class="md-nav__link">
     <span class="md-ellipsis">
-      About
+      What the error means
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
+  <a href="#how-to-recover-it" class="md-nav__link">
     <span class="md-ellipsis">
-      "Quick"-start
+      How to recover it
     </span>
   </a>
   
-    <nav class="md-nav" aria-label=""Quick"-start">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-it-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why it failed
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why it failed">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#wiring" class="md-nav__link">
+  <a href="#faulty-filament-sensor" class="md-nav__link">
     <span class="md-ellipsis">
-      Wiring
+      Faulty filament sensor
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
+  <a href="#printers-extruder-didnt-unload" class="md-nav__link">
     <span class="md-ellipsis">
-      Install
+      Printer's extruder didn't unload
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#3dchameleon-filament-grip" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration
+      3DChameleon filament grip
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#slicer-setup" class="md-nav__link">
+  <a href="#tip-shaping" class="md-nav__link">
     <span class="md-ellipsis">
-      Slicer Setup
+      Tip Shaping
     </span>
   </a>
   
@@ -861,20 +881,50 @@
   
 
 
-<h1 id="home">Home</h1>
-<h2 id="about">About</h2>
-<p><strong>3dchameleon-klipper</strong> is a highly configuration klipper plugin for the <a href="https://3dchameleon.com">3DChameleon</a></p>
-<h2 id="quick-start">"Quick"-start</h2>
-<h3 id="wiring">Wiring</h3>
-<p>To begin setting up <strong>3dchameleon-klipper</strong>, see <a href="initialsetup/wiring/">Wiring</a> to connect your 3DChameleon to your Raspberry Pi.</p>
-<h3 id="install">Install</h3>
-<p>Install <strong>3dchameleon-klipper</strong>. Run the following on your Raspberry Pi:</p>
-<pre><code>`cd ~ &amp;&amp; git clone https://github.com/3DCoded/3dchameleon-klipper &amp;&amp; cd 3dchameleon-klipper &amp;&amp; ./install.sh`
+<h1 id="unload-failed">Unload Failed</h1>
+<p>If your printer pauses during a toolchange and displays an <code>Unload Failed</code> message on your printer's display, follow this guide to recover the toolchange and to diagnose the cause of the failure.</p>
+<h2 id="what-the-error-means">What the error means</h2>
+<p>An <code>Unload Failed</code> message means that while the Chameleon was trying to unload the filament, the printer's filament sensor still detected filament.</p>
+<h2 id="how-to-recover-it">How to recover it</h2>
+<ol>
+<li>Unload your filament from your printer's extruder</li>
+<li>Detach the Chameleon's PTFE tube from your printer's extruder</li>
+<li>Cut off the filament tip with side cutters</li>
+<li>Manually pull the filament into the Y splitter and out of the way of other filaments</li>
+<li>Check the Klipper console to see what the next tool is. For example, if <code>T0 -&gt; T1</code> was the most recent toolchange message in the Klipper console, your printer was trying to unload <code>T0</code> and load <code>T1</code></li>
+<li>Load in the corresponding filament manually into your printer's extruer</li>
+<li>Load the filament to your hotend using your printer controls</li>
+<li>Reconnect the Chameleon's PTFE tube to your printer's extruder</li>
+<li>Resume your print</li>
+</ol>
+<p>Congratulations! You just recovered a failed toolchange.</p>
+<h2 id="why-it-failed">Why it failed</h2>
+<p>To prevent future unload failures, here are some common causes and fixes for failed unloads:</p>
+<h3 id="faulty-filament-sensor">Faulty filament sensor</h3>
+<p>If your printer's filament sensor is giving faulty readings, it can cause false alarms of failed loads and unloads. There are too many types and variations of filament sensors to cover them all, but here are some tips to diagnose the failure:</p>
+<ul>
+<li>Check filament sensor wiring</li>
+<li>If mechanical sensor, check the filament sensor for filament debris</li>
+<li>If optical sensor, the color of the filament may not work well with the sensor</li>
+<li>If optical sensor, lighting may also mess with detection reliability</li>
+</ul>
+<h3 id="printers-extruder-didnt-unload">Printer's extruder didn't unload</h3>
+<p>If your printer's extruder doesn't unload far enough before doing the toolchange, it might still be gripping the filament while the Chameleon is trying to pull it out. To fix it, change the <code>G1 E</code> value to something higher at the end of <code>QUICK_TIP_SHAPING</code> in <code>3dchameleon.cfg</code>. </p>
+<p>Example before:</p>
+<pre><code>G1 E-60 F2000
 </code></pre>
-<h3 id="configuration">Configuration</h3>
-<p>Follow <a href="initialsetup/configuration/">Configuration</a> to configure your 3DChameleon to your specific setup.</p>
-<h3 id="slicer-setup">Slicer Setup</h3>
-<p>Follow <a href="initialsetup/slicersetup/">Slicer Setup</a> to setup PrusaSlier for this plugin and your 3DChameleon. OrcaSlicer support is coming soon.</p>
+<p>Example after:</p>
+<pre><code>G1 E-100 F2000
+</code></pre>
+<h3 id="3dchameleon-filament-grip">3DChameleon filament grip</h3>
+<p>If the 3DChameleon can't grip the filament properly, it won't be able to pull it out through the Y splitter. To fix this, print out and install <a href="https://www.printables.com/model/872170-3dchameleon-mk4-pro-organized-models">Tension Tuning Sliders</a> for the problematic filament paths. Under <code>Files</code> -&gt; <code>Tension Sliders</code>, pick the appropriate slider:</p>
+<ul>
+<li>The first value is the distance between the drive gear and the bearing. Smaller values here make them closer together.</li>
+<li>The second value is the tension of the springs pushing the bearing and the drive gear together. Larger values here make them pushed closer together with greater force.</li>
+</ul>
+<h3 id="tip-shaping">Tip Shaping</h3>
+<p>If your filament tip is improperly shaped, with a blob or string at the tip, it will require excessive force to unload it through the tube. In extreme cases, you can get <a href="https://forum.prusa3d.com/forum/postid/224374/">the dreaded hook of death</a>. </p>
+<p>As a general rule of thumb, for <code>QUICK_TIP_SHAPING</code>, a larger <code>MOVES</code> value will result in cleaner tips. However, the most reliable method is to install an Auto3DClippy. See <a href="../../initialsetup/configuration/">Configuration</a> for config changes. Note that you will need to switch to the <code>dev</code> branch for Auto3DClippy support as of time of writing.</p>
 
 
 
@@ -921,10 +971,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.instant", "navigation.instant.prefetch", "search.suggest", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.instant.prefetch", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
   </body>
