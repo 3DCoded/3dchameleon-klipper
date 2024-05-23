@@ -6,7 +6,7 @@ This guide will explain how to setup PrusaSlicer (OrcaSlicer coming soon) with t
 
 1. In PrusaSlicer, go to `Printer Settings` -> `General` -> `Capabilities` -> `Extruders`, and set it to 4
 2. Enable the `Single Extruder Multi Material` checkbox
-![](assets/images/slicersetup1.png)
+![](slicersetup1.png)
 
 3. In your Klipper `PRINT_START` macro, add the following **BEFORE** your purge line:
 ```
@@ -42,11 +42,11 @@ SET_CHAMELEON_STATE P={next_extruder}
 ```
 7. In `Single Extruder MM Setup`, set all the fields **EXCEPT** `Purging Volume` to 0
 8. Optionally, enable `High extruder current on filament swap`
-![](assets/images/slicersetup2.png)
+![](slicersetup2.png)
 
 9. In `Filament Settings` -> `Advanced` -> `Toolchange Parameters with single extruder MM printers`, set all the values to 0 **EXCEPT** `Purge Volume Multiplier`
 10. Open `Ramming settings...` and set `Total ramming time (s)` to 0, then hit `OK`
 11. For each of your filament presets, set your `Loading speed at the start` to however many `MOVES` works for your filament with `QUICK_TIP_SHAPING`
 
-![](assets/images/slicersetup3.png)
-![](assets/images/slicersetup4.png)
+![](slicersetup3.png)
+![](slicersetup4.png)

@@ -2,7 +2,7 @@
 
 ## About
 
-3dchameleon-klipper is a highly configuration klipper plugin for the [3DChameleon](https://3dchameleon.com)
+**3dchameleon-klipper** is a highly configuration klipper plugin for the [3DChameleon](https://3dchameleon.com)
 
 ## "Quick"-start
 

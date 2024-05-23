@@ -1,21 +1,45 @@
 site_name: 3DChameleon-klipper Docs
 site_url: https://3dcoded.github.io/3dchameleon-klipper
 repo_url: https://github.com/3dcoded/3dchameleon-klipper
+plugins:
+  - search
+  - autolinks 
 theme:
   features:
+      - navigation.expand
       - navigation.instant
       - navigation.instant.prefetch
+      - search.suggest
+      - search.highlight
+      - search.share
   name: material
   palette: 
-
     # Palette toggle for light mode
     - scheme: default
+      primary: green
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - scheme: slate
+      primary: green
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+nav:
+  - index.md
+  - Initial Setup:
+    - initialsetup/wiring.md
+    - initialsetup/configuration.md
+    - initialsetup/slicersetup.md
+  - Other:
+    - other/updating.md
+    - other/utilitygcodes.md
+  - Troubleshooting:
+    - troubleshooting/unloadfailed.md
+    - troubleshooting/loadfailed.md
+  - Contributing:
+    - contributing/bugs.md
+    - contributing/features.md
+    - contributing/branches.md

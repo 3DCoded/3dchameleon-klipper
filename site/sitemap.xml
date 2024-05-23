@@ -5,4 +5,29 @@
          <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://3dcoded.github.io/3dchameleon-klipper/configuration/</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://3dcoded.github.io/3dchameleon-klipper/slicersetup/</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://3dcoded.github.io/3dchameleon-klipper/updating/</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://3dcoded.github.io/3dchameleon-klipper/utilitygcodes/</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://3dcoded.github.io/3dchameleon-klipper/wiring/</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
