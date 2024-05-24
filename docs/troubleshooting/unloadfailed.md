@@ -26,6 +26,8 @@ To prevent future unload failures, here are some common causes and fixes for fai
 
 ### Faulty filament sensor
 
+**This section applies only to setups using 3dchameleon-klipper with a filament sensor**
+
 If your printer's filament sensor is giving faulty readings, it can cause false alarms of failed loads and unloads. There are too many types and variations of filament sensors to cover them all, but here are some tips to diagnose the failure:
 
 - Check filament sensor wiring
@@ -34,6 +36,8 @@ If your printer's filament sensor is giving faulty readings, it can cause false 
 - If optical sensor, lighting may also mess with detection reliability
 
 ### Printer's extruder didn't unload
+
+**This section applies to all setups. However, the solution described here may be slightly different if not using 3dchameleon-klipper**
 
 If your printer's extruder doesn't unload far enough before doing the toolchange, it might still be gripping the filament while the Chameleon is trying to pull it out. To fix it, change the `G1 E` value to something higher at the end of `QUICK_TIP_SHAPING` in `3dchameleon.cfg`. 
 
@@ -49,12 +53,18 @@ G1 E-100 F2000
 
 ### 3DChameleon filament grip
 
+**This section applies to all setups**
+
 If the 3DChameleon can't grip the filament properly, it won't be able to pull it out through the Y splitter. To fix this, print out and install [Tension Tuning Sliders](https://www.printables.com/model/872170-3dchameleon-mk4-pro-organized-models) for the problematic filament paths. Under `Files` -> `Tension Sliders`, pick the appropriate slider:
 
 - The first value is the distance between the drive gear and the bearing. Smaller values here make them closer together.
 - The second value is the tension of the springs pushing the bearing and the drive gear together. Larger values here make them pushed closer together with greater force.
 
 ### Tip Shaping
+
+**This section applies to all setups. However, the solution described here may be slightly different if not using 3dchameleon-klipper**
+
+**This section applies to all setups. However, the solution
 
 If your filament tip is improperly shaped, with a blob or string at the tip, it will require excessive force to unload it through the tube. In extreme cases, you can get [the dreaded hook of death](https://forum.prusa3d.com/forum/postid/224374/). 
 

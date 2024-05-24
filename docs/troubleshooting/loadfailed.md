@@ -24,6 +24,9 @@ To prevent future load failures, here are some common causes and fixes for faile
 
 ### Faulty filament sensor
 
+**This section applies only to setups using 3dchameleon-klipper with a filament sensor**
+
+
 If your printer's filament sensor is giving faulty readings, it can cause false alarms of failed loads and unloads. There are too many types and variations of filament sensors to cover them all, but here are some tips to diagnose the failure:
 
 - Check filament sensor wiring
@@ -33,9 +36,13 @@ If your printer's filament sensor is giving faulty readings, it can cause false 
 
 ### Previous filament failed to unload fully
 
+**This section applies to all setups**
+
 If the previous filament failed to fully unload, it will be in the way of the next filament when trying to load. See [Unload Failed Troubleshooting](unloadfailed.md#why-it-failed) for common causes and fixes.
 
 ### 3DChameleon filament grip
+
+**This section applies to all setups**
 
 If the 3DChameleon can't grip the filament properly, it won't be able to push it through the Y splitter into your printer's extruder. To fix this, print out and install [Tension Tuning Sliders](https://www.printables.com/model/872170-3dchameleon-mk4-pro-organized-models) for the problematic filament paths. Under `Files` -> `Tension Sliders`, pick the appropriate slider:
 
@@ -43,6 +50,8 @@ If the 3DChameleon can't grip the filament properly, it won't be able to push it
 - The second value is the tension of the springs pushing the bearing and the drive gear together. Larger values here make them pushed closer together with greater force.
 
 ### Tip Shaping
+
+**This section applies to all setups. However, the solution described here may be slightly different if not using 3dchameleon-klipper**
 
 If your filament tip is improperly shaped, with a blob or string at the tip, it will require excessive force to load it through the tube. In extreme cases, you can get [the dreaded hook of death](https://forum.prusa3d.com/forum/postid/224374/). 
 
