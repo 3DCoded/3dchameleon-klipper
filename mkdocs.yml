@@ -36,6 +36,9 @@ nav:
   - Other:
     - other/updating.md
     - other/utilitygcodes.md
+  - Experimental:
+    - experimental/auto3dclippy.md
+    - experimental/auto3dklippy.md
   - Troubleshooting:
     - troubleshooting/unloadfailed.md
     - troubleshooting/loadfailed.md

@@ -899,6 +899,7 @@
 <h2 id="why-it-failed">Why it failed</h2>
 <p>To prevent future load failures, here are some common causes and fixes for failed loads:</p>
 <h3 id="faulty-filament-sensor">Faulty filament sensor</h3>
+<p><strong>This section applies only to setups using 3dchameleon-klipper with a filament sensor</strong></p>
 <p>If your printer's filament sensor is giving faulty readings, it can cause false alarms of failed loads and unloads. There are too many types and variations of filament sensors to cover them all, but here are some tips to diagnose the failure:</p>
 <ul>
 <li>Check filament sensor wiring</li>
@@ -907,14 +908,17 @@
 <li>If optical sensor, lighting may also mess with detection reliability</li>
 </ul>
 <h3 id="previous-filament-failed-to-unload-fully">Previous filament failed to unload fully</h3>
+<p><strong>This section applies to all setups</strong></p>
 <p>If the previous filament failed to fully unload, it will be in the way of the next filament when trying to load. See <a href="../unloadfailed/#why-it-failed">Unload Failed Troubleshooting</a> for common causes and fixes.</p>
 <h3 id="3dchameleon-filament-grip">3DChameleon filament grip</h3>
+<p><strong>This section applies to all setups</strong></p>
 <p>If the 3DChameleon can't grip the filament properly, it won't be able to push it through the Y splitter into your printer's extruder. To fix this, print out and install <a href="https://www.printables.com/model/872170-3dchameleon-mk4-pro-organized-models">Tension Tuning Sliders</a> for the problematic filament paths. Under <code>Files</code> -&gt; <code>Tension Sliders</code>, pick the appropriate slider:</p>
 <ul>
 <li>The first value is the distance between the drive gear and the bearing. Smaller values here make them closer together.</li>
 <li>The second value is the tension of the springs pushing the bearing and the drive gear together. Larger values here make them pushed closer together with greater force.</li>
 </ul>
 <h3 id="tip-shaping">Tip Shaping</h3>
+<p><strong>This section applies to all setups. However, the solution described here may be slightly different if not using 3dchameleon-klipper</strong></p>
 <p>If your filament tip is improperly shaped, with a blob or string at the tip, it will require excessive force to load it through the tube. In extreme cases, you can get <a href="https://forum.prusa3d.com/forum/postid/224374/">the dreaded hook of death</a>. </p>
 <p>As a general rule of thumb, for <code>QUICK_TIP_SHAPING</code>, a larger <code>MOVES</code> value will result in cleaner tips. However, the most reliable method is to install an Auto3DClippy. See <a href="../../initialsetup/configuration/">Configuration</a> for config changes. Note that you will need to switch to the <code>dev</code> branch for Auto3DClippy support as of time of writing.</p>
 
