@@ -21,6 +21,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://3dcoded.github.io/3dchameleon-klipper/experimental/auto3dclippy/</loc>
+         <lastmod>2024-05-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://3dcoded.github.io/3dchameleon-klipper/experimental/auto3dklippy/</loc>
+         <lastmod>2024-05-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://3dcoded.github.io/3dchameleon-klipper/initialsetup/configuration/</loc>
          <lastmod>2024-05-24</lastmod>
          <changefreq>daily</changefreq>
