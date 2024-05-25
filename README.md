@@ -1,2 +1,2 @@
-# gh-pages
-This branch holds the code for the Github Pages site for 3DChameleon-klipper
+# docs
+This branch holds the documentation source for https://3dcoded.github.io/3dchameleon-klipper
