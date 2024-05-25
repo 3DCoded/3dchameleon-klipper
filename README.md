@@ -14,7 +14,7 @@
 - Support for multiple filament sensors to reduce failed unloads (See https://github.com/3DCoded/3dchameleon-klipper/issues/4)
 - Support for "telling" the Chameleon what tool is loaded based on the filament sensors
 - Ability to assist with initially loading the Chameleon (see https://github.com/3DCoded/3dchameleon-klipper/issues/5)
-- Support for Klipperized Auto3DClippy (in early development)
-- Support for normal Auto3DClippy (experimental in dev branch)
+- Support for Klipperized Auto3DClippy (in early development) (see https://github.com/3DCoded/3dchameleon-klipper/issues/8)
+- Support for normal Auto3DClippy (experimental in dev branch) (see https://github.com/3DCoded/3dchameleon-klipper/issues/7)
 
 For information on setup and usage, configuration, and more, please see [the Documentation](https://3dcoded.github.io/3dchameleon-klipper/)
