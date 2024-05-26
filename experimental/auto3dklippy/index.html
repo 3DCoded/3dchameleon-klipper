@@ -577,6 +577,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#wiring" class="md-nav__link">
     <span class="md-ellipsis">
       Wiring
@@ -851,6 +860,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#wiring" class="md-nav__link">
     <span class="md-ellipsis">
       Wiring
@@ -888,12 +906,25 @@
 
 <h1 id="auto3dklippy">Auto3DKlippy</h1>
 <p>The Auto3DKlippy (with a K) is a Klipperized Auto3DClippy implementation. It uses the same cutter mechanism, but is controlled via an Arduino, instead of the 3DChameleon's electronics. It is still only lightly tested and only recommended for advanced users.</p>
+<h2 id="note">Note</h2>
+<p>Many of the tips shared in <a href="../auto3dclippy/">Auto3DClippy</a> can be applied to the Auto3DKlippy</p>
 <h2 id="wiring">Wiring</h2>
-<p>Wiring guide is available <a href="https://www.tinkercad.com/things/bkdLnYCJRPw-auto3dclippy-wiring">here</a>. The relevant 3DChameleon forum post is <a href="https://www.3dchameleon.com/forum/getting-started/auto3dclippy-wiring">here</a></p>
+<p>See <a href="../auto3dclippy/#wiring">Auto3DClippy</a> for wiring details.</p>
+<p>After that, a few changes need to be made. </p>
+<ol>
+<li>The Signal and GND wires need to be connected to an Arduino (In my case an Arduino Nano on a breadboard)</li>
+<li>Plug the Arduino into your Raspberry Pi</li>
+<li>Follow <a href="https://www.klipper3d.org/Installation.html#building-and-flashing-the-micro-controller">this guide</a> to flash Klipper firmware onto your Arduino</li>
+<li>Follow <a href="https://www.klipper3d.org/Installation.html#configuring-klipper">this guide</a> to configure it as a Klipper MCU
+    Make sure the MCU is called <code>arduino</code>. To do this, replace <code>[mcu]</code> with <code>[mcu arduino]</code></li>
+</ol>
 <h2 id="configuration">Configuration</h2>
 <p>The configuration for the Auto3DKlippy is available in the <a href="https://github.com/3DCoded/3dchameleon-klipper/tree/dev"><code>dev</code></a> branch. The relevant sections in <code>3dchameleon.cfg</code> are:</p>
-<pre><code>[servo clippy]
-pin: host: gpio18
+<pre><code>[mcu arduino]
+serial: /dev/serial/your-arduino-id
+
+[servo clippy]
+pin: arduino: PD5
 </code></pre>
 <p>and</p>
 <pre><code># Macros for Auto3DClippy:
