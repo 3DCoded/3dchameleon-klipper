@@ -562,6 +562,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Wiring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -857,6 +890,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Wiring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -889,7 +955,20 @@
 <h1 id="auto3dclippy">Auto3DClippy</h1>
 <p>The Auto3DClippy is the 3DChameleon's filament cutter designed for the MK4 Pro. It works by having a servo attached to a knife blade, and by moving the servo, it can cut the filament cleanly. It is controlled with the 3DChameleon via three pins. </p>
 <h2 id="wiring">Wiring</h2>
-<p>Wiring guide is available <a href="https://www.tinkercad.com/things/bkdLnYCJRPw-auto3dclippy-wiring">here</a>. The relevant 3DChameleon forum post is <a href="https://www.3dchameleon.com/forum/getting-started/auto3dclippy-wiring">here</a></p>
+<h3 id="method-1">Method 1</h3>
+<p>Use this method if you have a metal horn on your servo and/or want a cleaner wiring solution.</p>
+<p>See <a href="https://www.3dchameleon.com/forum/main/comment/7a6f24b5-c81b-4a33-8065-4de228b41ace?postId=664bca7465d05500108fcb85">this post</a> on the 3DChameleon forums.</p>
+<h3 id="method-2">Method 2</h3>
+<p>Use this method if you're using an Auto3D<strong>K</strong>lippy, or if you already have the parts required for this method.</p>
+<p>Wiring guide is available <a href="https://www.tinkercad.com/things/bkdLnYCJRPw-auto3dclippy-wiring">here</a>. The relevant 3DChameleon forum post is <a href="https://www.3dchameleon.com/forum/getting-started/auto3dclippy-wiring">here</a>.</p>
+<h2 id="recommendations">Recommendations</h2>
+<ul>
+<li>Servo extension cable: <a href="https://a.co/d/39kKTmJ">Amazon</a></li>
+<li>
+<p>Metal servo horn: <a href="https://a.co/d/e8D5AjG">Amazon</a></p>
+<p>NOTE that the metal servo horn requires a different Auto3DClippy design. See <a href="https://www.3dchameleon.com/forum/main/comment/7a6f24b5-c81b-4a33-8065-4de228b41ace?postId=664bca7465d05500108fcb85">this post</a> for details.</p>
+</li>
+</ul>
 <h2 id="configuration">Configuration</h2>
 <p>This feature is only available in the <a href="https://github.com/3DCoded/3dchameleon-klipper/tree/dev"><code>dev</code></a> branch, as it is still experimental. To configure it, just add:</p>
 <pre><code>clippy: true
