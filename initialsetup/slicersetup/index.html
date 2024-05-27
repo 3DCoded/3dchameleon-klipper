@@ -405,11 +405,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prusaslicer" class="md-nav__link">
+  <a href="#klipper-macros" class="md-nav__link">
     <span class="md-ellipsis">
-      PrusaSlicer
+      Klipper macros
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prusaslicer-and-orcaslicer" class="md-nav__link">
+    <span class="md-ellipsis">
+      PrusaSlicer and OrcaSlicer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PrusaSlicer and OrcaSlicer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-number-of-extruders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set number of extruders
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pass-parameters-to-print_start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pass parameters to PRINT_START
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolchange-gcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Toolchange GCode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printer-tip-shaping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printer Tip Shaping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filament-tip-shaping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filament Tip Shaping
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -842,11 +902,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prusaslicer" class="md-nav__link">
+  <a href="#klipper-macros" class="md-nav__link">
     <span class="md-ellipsis">
-      PrusaSlicer
+      Klipper macros
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prusaslicer-and-orcaslicer" class="md-nav__link">
+    <span class="md-ellipsis">
+      PrusaSlicer and OrcaSlicer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PrusaSlicer and OrcaSlicer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-number-of-extruders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set number of extruders
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pass-parameters-to-print_start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pass parameters to PRINT_START
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolchange-gcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Toolchange GCode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printer-tip-shaping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printer Tip Shaping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filament-tip-shaping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filament Tip Shaping
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -869,18 +989,10 @@
 
 
 <h1 id="slicer-setup">Slicer Setup</h1>
-<p>This guide will explain how to setup PrusaSlicer (OrcaSlicer coming soon) with this plugin, optomizing some settings for this plugin.</p>
-<h2 id="prusaslicer">PrusaSlicer</h2>
-<ol>
-<li>In PrusaSlicer, go to <code>Printer Settings</code> -&gt; <code>General</code> -&gt; <code>Capabilities</code> -&gt; <code>Extruders</code>, and set it to 4</li>
-<li>
-<p>Enable the <code>Single Extruder Multi Material</code> checkbox
-<img alt="" src="../../assets/images/slicersetup1.png" /></p>
-</li>
-<li>
-<p>In your Klipper <code>PRINT_START</code> macro, add the following <strong>BEFORE</strong> your purge line:</p>
-</li>
-</ol>
+<p>This guide will explain how to setup PrusaSlicer and OrcaSlicer with this plugin, optomizing some settings for this plugin.</p>
+<h2 id="klipper-macros">Klipper macros</h2>
+<p>Before the full slicer setup begins, the following changes need to be made to your <code>PRINT_START</code> and <code>PRINT_END</code> Klipper macros.</p>
+<p>In your <code>PRINT_START</code> macro, add the following <strong>BEFORE</strong> your purge line:</p>
 <pre><code>RESET_CHAMELEON
 G4 P1000
 PULSE_CHAMELEON PULSES=7
@@ -890,23 +1002,37 @@ LOAD_CHAMELEON
 SET_CHAMELEON_STATE P={params.INITIAL_EXTRUDER} L=-1
 G1 E65 F1000; Change this to your extruder to hotend distance
 </code></pre>
-<ol>
-<li>Back in PrusaSlicer, in <code>Custom G-Code</code> -&gt; <code>Start G-Code</code>, pass the parameter <code>INITIAL_EXTRUDER</code> to your <code>PRINT_START</code> macro:</li>
-</ol>
-<pre><code>PRINT_START other_parameters... INITIAL_EXTRUDER=[initial_extruder]
-</code></pre>
-<ol>
-<li>In your Klipper <code>PRINT_END</code> macro, add the following <strong>BEFORE</strong> your printer cools down:</li>
-</ol>
+<p>In your <code>PRINT_END</code> macro, add the following <strong>BEFORE</strong> your printer cools down:</p>
 <pre><code>{% set saved = printer.save_variables.variables %}
 {% set p = saved.prev_ext %}
 QUICK_TIP_SHAPING MOVES=3; change this to however any moves works for your filaments
 PULSE_CHAMELEON PULSES=6
 UNLOAD_CHAMELEON TOOL={p}
 </code></pre>
-<ol>
-<li>Back in PrusaSlicer, in your <code>Tool Change G-Code</code> section, put the following:</li>
-</ol>
+<h2 id="prusaslicer-and-orcaslicer">PrusaSlicer and OrcaSlicer</h2>
+<p>The same settings shown here <strong>MAY</strong> work with SuperSlicer, BambuStudio, and other PrusaSlicer forks.</p>
+<h3 id="set-number-of-extruders">Set number of extruders</h3>
+<p>To begin slicer setup, we need to configure the slicer so that it can use four extruders. </p>
+<p>For <em>PrusaSlicer</em>, go to <code>Printer Settings</code> -&gt; <code>General</code> -&gt; <code>Capabilities</code> -&gt; <code>Extruders</code>, and set it to 4
+2. Enable the <code>Single Extruder Multi Material</code> checkbox
+<img alt="" src="../../assets/images/prusasetup1.png" />
+<strong>NOTE</strong> that while this screenshot shows the <code>Single Extruer Multi Material</code> checkbox <strong>UNCHECKED</strong>, it should be <strong>CHECKED</strong>.</p>
+<p>For <em>OrcaSlicer</em>, on the left panel, in the filament section, click the <code>+</code> button until four filaments are shown
+<img alt="" src="../../assets/images/orcasetup1.png" /></p>
+<h3 id="pass-parameters-to-print_start">Pass parameters to <code>PRINT_START</code></h3>
+<p>To use the modified <code>PRINT_START</code> macro from before, we need to pass the <code>INITIAL_EXTRUDER</code> parameter to the macro. </p>
+<p>In <em>PrusaSlicer</em>, go to <code>Printer Settings</code> -&gt; <code>Custom G-Code</code> -&gt; <code>Start G-Code</code>
+<img alt="" src="../../assets/images/prusasetup2.png" /></p>
+<p>In <em>OrcaSlicer</em>, go to <code>Printer Settings</code> -&gt; <code>Machine G-Code</code> -&gt; <code>Machine start G-Code</code>
+<img alt="" src="../../assets/images/orcasetup2.png" /></p>
+<p>Edit the contents of the start print GCode as follows:</p>
+<pre><code>PRINT_START other parameters... INITIAL_EXTRUDER=[initial_extruder]
+</code></pre>
+<h3 id="toolchange-gcode">Toolchange GCode</h3>
+<p>To successfully run a toolchange, the slicer's toolchange GCode needs to be changed. In the same panel as in the previous step, navigate to the toolchange GCode.</p>
+<p>In <em>PrusaSlicer</em>, it is called <code>Tool Change G-Code</code></p>
+<p>In <em>OrcaSlicer</em>, it is called <code>Change filament G-Code</code></p>
+<p>Replace the existing contents (if there are any) with:</p>
 <pre><code>SET_CHAMELEON_STATE L={layer_num}
 {if previous_extruder &gt; -1}
 QUICK_TIP_SHAPING MOVES=[filament_loading_speed_start[previous_extruder]]
@@ -914,20 +1040,23 @@ QUICK_TIP_SHAPING MOVES=[filament_loading_speed_start[previous_extruder]]
 T{next_extruder}
 SET_CHAMELEON_STATE P={next_extruder}
 </code></pre>
-<ol>
-<li>In <code>Single Extruder MM Setup</code>, set all the fields <strong>EXCEPT</strong> <code>Purging Volume</code> to 0</li>
-<li>
-<p>Optionally, enable <code>High extruder current on filament swap</code>
-<img alt="" src="../../assets/images/slicersetup2.png" /></p>
-</li>
-<li>
-<p>In <code>Filament Settings</code> -&gt; <code>Advanced</code> -&gt; <code>Toolchange Parameters with single extruder MM printers</code>, set all the values to 0 <strong>EXCEPT</strong> <code>Purge Volume Multiplier</code></p>
-</li>
-<li>Open <code>Ramming settings...</code> and set <code>Total ramming time (s)</code> to 0, then hit <code>OK</code></li>
-<li>For each of your filament presets, set your <code>Loading speed at the start</code> to however many <code>MOVES</code> works for your filament with <code>QUICK_TIP_SHAPING</code></li>
-</ol>
-<p><img alt="" src="../../assets/images/slicersetup3.png" />
-<img alt="" src="../../assets/images/slicersetup4.png" /></p>
+<h3 id="printer-tip-shaping">Printer Tip Shaping</h3>
+<p>This plugin (and the 3DChameleon) have their own custom tip shaping algorithms. To use them, the slicer's tip shaping must be disabled. </p>
+<p>In <em>PrusaSlicer</em>, navigate to <code>Printer Settings</code> -&gt; <code>Single Extruder MM Setup</code></p>
+<p><img alt="" src="../../assets/images/prusasetup3.png" /></p>
+<p>In <em>OrcaSlicer</em>, navigate to <code>Printer Settings</code> -&gt; <code>Multimaterial</code> -&gt; <code>Single extruder multimaterial parameters</code></p>
+<p><img alt="" src="../../assets/images/orcasetup3.png" /></p>
+<p>Set all the fields <strong>EXCEPT</strong> <code>Purging Volume</code> (PrusaSlicer only) to 0. Optionally, enable <code>High extruder current on filament swap</code></p>
+<h3 id="filament-tip-shaping">Filament Tip Shaping</h3>
+<p>The final step of slicer setup is disabling the filament-specific tip shaping settings. </p>
+<p><strong>These changes will need to be repeated for ALL your filament settings</strong></p>
+<p>In <em>PrusaSlicer</em>, go to <code>Filament Settings</code> -&gt; <code>Advanced</code> -&gt; <code>Toolchange Parameters with single extruder MM printers</code>.</p>
+<p><img alt="" src="../../assets/images/prusasetup4.png" /></p>
+<p>In <em>OrcaSlicer</em>, go to <code>Filament Settings</code> -&gt; <code>Multimaterial</code> -&gt; <code>Toolchange parameters with single parameter MM printers</code>.</p>
+<p><img alt="" src="../../assets/images/orcasetup4.png" /></p>
+<p>Set all the values to 0 <strong>EXCEPT</strong> <code>Purge Volume Multiplier</code> (PrusaSlicer only).</p>
+<p>Click the <code>Ramming settings...</code> button, and set the <code>Total ramming time (s)</code> to 0, then hit <code>OK</code></p>
+<p><img alt="" src="../../assets/images/prusasetup5.png" /></p>
 
 
 
