@@ -37,6 +37,7 @@ nav:
     - other/updating.md
     - other/utilitygcodes.md
   - Experimental:
+    - experimental/klipperscreen.md
     - experimental/auto3dclippy.md
     - experimental/auto3dklippy.md
   - Troubleshooting:
