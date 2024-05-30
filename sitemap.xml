@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://3dcoded.github.io/3dchameleon-klipper/other/firmware/</loc>
+         <lastmod>2024-05-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://3dcoded.github.io/3dchameleon-klipper/other/klipperscreen/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
