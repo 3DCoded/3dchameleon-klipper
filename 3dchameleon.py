@@ -10,7 +10,10 @@ class Chameleon:
 
         # Parse config
         self.clippy = config.getboolean('clippy', False)
-        self.clippy_distance = config.getfloat('clippy_distance', 40)
+        self.clippy_distance = config.getfloat('clippy_distance', 55)
+
+        self.extruder_hotend_distance = config.getfloat('extruder_hotend_distance', 65)
+
         self.filament_sensor_name = config.get('filament_sensor_name', 'fsensor')
         self.filament_sensor_enabled = self.filament_sensor_name != 'disabled'
         if self.filament_sensor_enabled:
@@ -95,6 +98,24 @@ class Chameleon:
         # Set event handler
         self.printer.register_event_handler("klippy:ready", lambda: self.cmd_UPDATE_CHAMELEON_SENSOR(None))
     
+    def get_status(self, eventtime):
+        return {
+            'config': {
+                'clippy': self.clippy,
+                'clippy_distance': self.clippy_distance,
+                'extruder_hotend_distance': self.extruder_hotend_distance,
+                'filament_sensor_name': self.filament_sensor_name,
+                'filament_sensor_type': self.filament_sensor_type,
+                'pin': self.pin,
+                'unload_time': self.unload_time,
+                'max_unload_time': self.max_unload_time,
+                'load_time': self.load_time,
+                'max_load_time': self.max_load_time,
+                'pulse_time': self.pulse_time,
+            },
+            'filament_detected': self.filament_detected[-1],
+        }
+    
     def _read_fsensor(self):
         if not self.filament_sensor_enabled:
             return
@@ -120,7 +141,7 @@ class Chameleon:
     
     cmd_UNLOAD_CHAMELEON_help = 'Unloads the 3DChameleon until the filament is past the filament runout sensor (when it reads False), and then waits unload_time to pull the filament out of the way for the next filament. Note that if the filament takes more than max_unload_time to trigger the filament sensor, then it will abort'
     def cmd_UNLOAD_CHAMELEON(self, gcmd):
-        tool = gcmd.get_int('TOOL')
+        tool = gcmd.get_int('TOOL', -1)
         self._set_chameleon(True)
         if self.filament_sensor_enabled and self.clippy:
             start = time.time()
