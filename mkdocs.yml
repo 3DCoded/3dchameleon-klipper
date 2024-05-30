@@ -37,8 +37,10 @@ nav:
     - other/updating.md
     - other/utilitygcodes.md
     - other/klipperscreen.md
-    - other/auto3dclippy.md
     - other/auto3dklippy.md
+  - 3DChameleon:
+    - other/auto3dclippy.md
+    - other/firmware.md
   - Troubleshooting:
     - troubleshooting/wiringtroubleshooting.md
     - troubleshooting/unloadfailed.md
