@@ -11,6 +11,7 @@
 - `PULSE_CHAMELEON PULSES=` Pulses the chameleon pin for the duration `PULSES * pulse_time` (`pulse_time` was set in [Configuration](configuration.md))
 - `RESET_CHAMELEON` Rapidly pulses the chameleon pin twice to reset the state to be ready for a toolchange (exits the load/unload filament stage of the Chameleon)
 - `TIP_SHAPING TEMP= STAGES=` Runs tip shaping using the default 3DChameleon method, then heats to `TEMP`. See below for information on `STAGES`
+- `MOVE_CHAMELEON_FILAMENT TOOL= IN=` Moves the filament `TOOL` `IN` inches. Alternatively, `MM=` can be passed to move the filament `TOOL` `MM` millimeters
 
 ## Debugging/Internal Use G-Codes
 

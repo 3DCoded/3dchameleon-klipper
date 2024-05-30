@@ -36,10 +36,9 @@ nav:
   - Other:
     - other/updating.md
     - other/utilitygcodes.md
-  - Experimental:
-    - experimental/klipperscreen.md
-    - experimental/auto3dclippy.md
-    - experimental/auto3dklippy.md
+    - other/klipperscreen.md
+    - other/auto3dclippy.md
+    - other/auto3dklippy.md
   - Troubleshooting:
     - troubleshooting/wiringtroubleshooting.md
     - troubleshooting/unloadfailed.md
