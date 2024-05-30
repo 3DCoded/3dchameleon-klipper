@@ -20,3 +20,5 @@
 - LCD control panel for the Chameleon (see https://github.com/3DCoded/3dchameleon-klipper/issues/9)
 
 For information on setup and usage, configuration, and more, please see [the Documentation](https://3dcoded.github.io/3dchameleon-klipper/)
+
+<meta name="google-site-verification" content="gLcNRIA4YNkoY4a3C_D_5L_f0SPbrSSi9dkHF0NL8U8" />
