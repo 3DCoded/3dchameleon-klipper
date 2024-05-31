@@ -95,6 +95,9 @@ class Chameleon:
             self.cmd_QUERY_CHAMELEON_SENSOR_help
         )
 
+        # Make status available to GCode macros
+        self.printer.add_object('chameleon', self)
+
         # Set event handler
         self.printer.register_event_handler("klippy:ready", lambda: self.cmd_UPDATE_CHAMELEON_SENSOR(None))
     
