@@ -8,7 +8,7 @@ Many of the tips shared in [Auto3DClippy](auto3dclippy.md) can be applied to the
 
 ## Wiring
 
-See [Auto3DClippy](auto3dclippy.md#wiring) for wiring details.
+Follow [this](https://www.tinkercad.com/things/eFnWjY0tssN-auto3dklippy-wiring-for-arduino-nano) diagram for wiring details.
 
 After that, a few changes need to be made. 
 
