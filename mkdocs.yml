@@ -39,13 +39,17 @@ nav:
     - other/klipperscreen.md
     - other/auto3dklippy.md
   - 3DChameleon:
-    - other/auto3dclippy.md
-    - other/firmware.md
+    - 3dchameleon/auto3dclippy.md
+    - 3dchameleon/firmware.md
   - Troubleshooting:
     - troubleshooting/wiringtroubleshooting.md
     - troubleshooting/unloadfailed.md
     - troubleshooting/loadfailed.md
+  - Printer-Specific Guides:
+    - byprinter/prusamk3splus.md
+    - byprinter/morebyprinter.md
   - Contributing:
     - contributing/bugs.md
     - contributing/features.md
     - contributing/branches.md
+    - contributing/development.md
