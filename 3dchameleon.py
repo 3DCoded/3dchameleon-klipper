@@ -177,7 +177,7 @@ class Chameleon:
                     self.gcode.run_script_from_command('M117 Load Failed')
                     self.gcode.run_script_from_command('PAUSE')
                     break
-                self.gcode.run_script_from_command('G4 P250')
+                self.gcode.run_script_from_command('M83\nG92 E0\nG1 E10 F2400')
         self.gcode.run_script_from_command(f'M83\nG92 E0\nG1 E10 F1200')
         self._set_chameleon(False)
     
