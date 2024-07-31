@@ -3,6 +3,8 @@
 
 **UPDATE:** I have since moved away from the Chameleon and made the [3MS](https://github.com/3dcoded/3ms) for Klipper. If you have Klipper, I highly recommend it due to its simplicity, ease of control, and low cost.
 
+## 3dchameleon-klipper is now obsolete in favor of the [3MS](https://github.com/3dcoded/3ms)!
+
 **Features:**
 - Many configuration options
 - Using the filament sensor to allow for more reliable loads and unloads
