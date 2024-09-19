@@ -1,7 +1,7 @@
 # Unofficial Klipper Support for 3DChameleon
 ### A highly configurable klipper extras module and configuration for the 3DChameleon
 
-**UPDATE:** I have since moved away from the Chameleon and made the [3MS](https://github.com/3dcoded/3ms) for Klipper. If you have Klipper, I highly recommend it due to its simplicity, ease of control, and low cost.
+**UPDATE:** I have since moved away from the Chameleon and made the [3MS](https://github.com/3dcoded/3ms) for Klipper. If you have Klipper, I highly recommend it due to its simplicity, ease of control, and low cost. If you already have a 3DChameleon, you can build a 3MS for cheaper [here](https://3dcoded.github.io/3MS/guides/3dchameleon/).
 
 ## 3dchameleon-klipper is now obsolete in favor of the [3MS](https://github.com/3dcoded/3ms)!
 
